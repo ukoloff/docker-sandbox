@@ -1,7 +1,5 @@
-FROM node:lts-alpine
+FROM python:lts-alpine
 
-COPY index.js .
-
-CMD ["node", "." ]
+CMD ["python", "web.py" ]
 
 EXPOSE 80
