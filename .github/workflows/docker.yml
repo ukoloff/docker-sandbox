@@ -28,7 +28,7 @@ jobs:
         with:
           push: true
           platforms: linux/386,linux/amd64
-          tags: ${{ secrets.DOCKER_USERNAME }}/www:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/www:node
       -
         name: Update repo description
         uses: peter-evans/dockerhub-description@v2
