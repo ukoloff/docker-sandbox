@@ -27,10 +27,8 @@ jobs:
         id: docker_build
         with:
           push: true
+          platforms: linux/386,linux/amd64
           tags: ${{ secrets.DOCKER_USERNAME }}/www:latest
-      -
-        name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}      
       -
         name: Update repo description
         uses: peter-evans/dockerhub-description@v2
