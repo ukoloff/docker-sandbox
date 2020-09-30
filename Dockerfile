@@ -1,7 +1,7 @@
 FROM python:3-alpine
 
-COPY *.py .
+COPY web .
 
-CMD ["python", "web.py" ]
+CMD ["python", "web" ]
 
 EXPOSE 80
