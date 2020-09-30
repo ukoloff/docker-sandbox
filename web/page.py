@@ -1,7 +1,8 @@
-count = [0]
+count = 0
 
 def html():
-  count[0] += 1
+  global count
+  count += 1
   return f"""
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +20,7 @@ def html():
   <div class='container-fluid'>
     <h1>Hello, world!</h1>
     Usage count:
-    <span class="badge badge-info">{count[0]}</span>
+    <span class="badge badge-info">{count}</span>
   </div>
 </body>
 </html>
