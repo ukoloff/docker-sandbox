@@ -1,6 +1,6 @@
 FROM python:3-alpine
 
-COPY *.py .
+COPY web .
 
 CMD ["python", "web" ]
 
