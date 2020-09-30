@@ -1,6 +1,8 @@
 FROM python:3-alpine
 
-COPY web .
+WORKDIR web-server
+
+COPY . .
 
 CMD ["python", "web" ]
 
