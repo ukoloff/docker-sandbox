@@ -3,6 +3,10 @@ from page import html
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
+        if self.path != '/':
+            self.send_error(404)
+            return
+            
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.send_header("X-Clacks-Overhead", "GNU Terry Pratchett")
