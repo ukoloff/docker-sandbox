@@ -1,7 +1,9 @@
 FROM python:3-alpine
 
-COPY *.py .
+WORKDIR web-server
 
-CMD ["python", "web.py" ]
+COPY . .
+
+CMD ["python", "web" ]
 
 EXPOSE 80
